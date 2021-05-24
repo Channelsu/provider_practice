@@ -21,4 +21,9 @@ class UserNotifier extends ChangeNotifier {
     _userList.removeWhere((_user) => _user.name == _userList[index].name);
     notifyListeners();
   }
+
+  incrementAge() {
+    _age++;
+    notifyListeners();
+  }
 }
