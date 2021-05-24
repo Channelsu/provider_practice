@@ -12,8 +12,13 @@ class UserNotifier extends ChangeNotifier {
   UnmodifiableListView<User> get userList =>
     UnmodifiableListView(_userList);
 
-  void addUser(User user) {
+  addUser(User user) {
     _userList.add(user);
+    notifyListeners();
+  }
+
+  deleteUser(index) {
+    _userList.removeWhere((_user) => _user.name == _userList[index].name);
     notifyListeners();
   }
 }
