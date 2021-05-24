@@ -11,6 +11,10 @@ class UserNotifier extends ChangeNotifier {
 
   UnmodifiableListView<User> get userList =>
     UnmodifiableListView(_userList);
+  
+  int get age => _age;
+
+  int get height =>_height;
 
   addUser(User user) {
     _userList.add(user);
