@@ -26,4 +26,9 @@ class UserNotifier extends ChangeNotifier {
     _age++;
     notifyListeners();
   }
+
+  incrementHeight() {
+    _height++;
+    notifyListeners();
+  }
 }
