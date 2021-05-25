@@ -1,7 +1,16 @@
+import 'package:provider/provider.dart';
+import 'package:providerpractice/controller/user_notifier.dart';
 import 'package:providerpractice/screens/home.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => UserNotifier()),
+    ],
+    child: MyApp(),
+  )
+);
 
 class MyApp extends StatelessWidget {
   @override
